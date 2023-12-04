@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Style Definitions -->
+    <style>
+        body {
+            background-color: lightslategrey;
+        }
+        #map, #image {
+            width: 100%;
+            height: 380px;
+        }
+        #image {
+            margin-top: 10px;
+        }
+        #image img {
+            width: 100%;
+            height: auto; 
+            object-fit: contain;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #coordinatesForm {
+            margin-bottom: 10px;
+        }
+        #aqi-details-container {
+            background-color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Local Air Quality Map</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+</head>
+<body>
+    <!-- Page Title -->
+    <h1>Let's Look Up Your Local Air Quality</h1>
+    <!-- Coordinates Input Form -->
+    <form id="coordinatesForm">
+        <label for="latitude"><strong>Latitude:</strong></label>
+        <input type="text" id="latitude" name="latitude" required>
+        <label for="longitude"><strong>Longitude:</strong></label>
+        <input type="text" id="longitude" name="longitude" required>
+        <button type="submit">Update Map</button>
+    </form>
+    
+    <!-- Map Display -->
+    <div id="map"></div>
+
+    <!-- Air Quality Index Details Section -->
+    <div id="aqi-details-container">
+        Enter your desired latitude and longitude to get in-depth data here.
+    </div>
+
+    <!-- Image Display -->
+    <div id="image">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/1*xq-Ys6HgAHf68yxCZbxdcQ.png" alt="Descriptive Alt Text">
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <!-- Custom JavaScript File -->
+    <script defer type="text/javascript" src="Final_Project_V1.js"></script>
+</body>
+</html>
