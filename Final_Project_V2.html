@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Local Air Quality Map</title>
+   <!--CSS-->
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <!-- Leaflet CSS -->
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+</head>
+<body>
+    
+   <!-- Page Title -->
+   <h1>Let's Look Up Your Local Air Quality</h1>
+   
+   <!-- Coordinates Input Form -->
+   <form id="coordinatesForm">
+       <label for="latitude"><strong>Latitude:</strong></label>
+       <input type="text" id="latitude" name="latitude" required>
+       <label for="longitude"><strong>Longitude:</strong></label>
+       <input type="text" id="longitude" name="longitude" required>
+       <button type="submit">Update Map</button>
+   </form>
+   
+
+   <!-- Map Display -->
+   <div id="map"></div>
+
+   <!-- Air Quality Index Details Section -->
+   <div id="aqi-details-container">
+       Enter your desired latitude and longitude to get in-depth data here.
+   </div>
+   <p><strong>Use this locational database as a reference:</strong></p>
+   <div id="supabase-data-container"></div>
+
+
+   
+   
+   <!-- Image Display -->
+   <div id="image">
+       <img src="https://miro.medium.com/v2/resize:fit:1400/1*xq-Ys6HgAHf68yxCZbxdcQ.png" alt="Descriptive Alt Text">
+   </div>
+
+
+   <!-- Leaflet JS -->
+   <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+   <!-- Custom JavaScript File -->
+   <script defer type="text/javascript" src="Final_Project_V2.js"></script>
+</body>

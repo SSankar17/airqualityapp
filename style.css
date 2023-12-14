@@ -1,50 +1,53 @@
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    background-color: lightslategrey;
 }
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-nav {
-    background-color: #f2f2f2;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+#map, #image {
     width: 100%;
+    height: 380px;
 }
-
-#airQualityContainer {
-    border: 1px solid #ccc;
+#image {
+    margin-top: 10px;
+}
+#image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#coordinatesForm {
+    margin-bottom: 10px;
+}
+#aqi-details-container {
+    background-color: white;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+#supabase-data-container table {
+width: 100%;
+border-collapse: collapse; /* This ensures that the border spacing is collapsed into a single border */
 }
 
+#supabase-data-container th, 
+#supabase-data-container td {
+padding: 8px; /* Adjust the padding as needed */
+border: 1px solid #ddd; /* Adds a light border to each cell */
+text-align: left;
+}
+
+#supabase-data-container th {
+background-color: #f2f2f2; /* Adds a background color to the header cells */
+color: #333;
+}
+
+/* Additional styles for zebra striping rows */
+#supabase-data-container tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+#supabase-data-container tr:hover {
+background-color: #ddd; /* Adds a hover effect for each row */
+}
 
