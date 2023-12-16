@@ -11,3 +11,5 @@ Air quality is an often underestimated factor that plays a pivotal role in our o
 **Developers:** Noah, Sanjana, Kisa
 
 **Languages:** HTML, JS, CSS
+
+**Target Users:** This is intended for the general public, in particular, those with breathing issues such as asthma or dust allergies as it can be helpful for these individuals to be able to check the air qualiity of a location before traveling in order to take necessary precausions. 
