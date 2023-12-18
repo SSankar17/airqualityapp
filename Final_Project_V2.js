@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to fetch and display Supabase table data
     function fetchAndDisplaySupabaseData() {
-        // Fetch data from your server's /data endpoint
+        // Fetch data from our server's /data endpoint
         fetch('http://localhost:3000/data')
             .then(response => response.json())
             .then(data => {
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 // Create a table header row
                 const headerRow = table.insertRow(0);
 
-                // Add table headers based on the keys in your data
+                // Add table headers based on the keys in our data
                 for (let key in supabaseData[0]) {
                     const headerCell = document.createElement('th');
                     headerCell.textContent = key;
@@ -103,11 +103,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
     }
 
-    // Add an event listener to the form for form submission
-    document.getElementById('coordinatesForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent the default form submission
-        fetchAndDisplaySupabaseData(); // Call the function to fetch and display Supabase data
-    });
+    
 
     // Initial fetch and display of Supabase data when the page loads
     fetchAndDisplaySupabaseData();

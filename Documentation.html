@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Documentation Page</h1>
+    </header>
+
+    <nav>
+        <a href="Final_Project_V2.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Documentation.html">Documentation</a>
+    </nav>
+
+    <!-- How to use the website section -->
+    <h2>How to Use the Website</h2>
+    <p>Welcome to the Air Quality Tracker website! This intuitive platform allows you to explore air quality data tailored to your specific location, with insights derived from the nearest weather station in our extensive network. Follow these simple steps to uncover a wealth of information about the air quality around you:</p>
+    <!-- Ordered list of steps -->
+    <ol>
+        <li>On the homepage, locate the search bar. Enter the latitude and longitude of your desired location, whether it's your current place, town, or city.</li>
+        <li>Hit the "Search" button to initiate the magic. The map will refresh and zoom into your specified coordinates, presenting you with detailed air quality data based on the closest weather station.</li>
+        <li>Feel free to interact with the map to discover different regions. As you explore, the air quality indicators will dynamically update to reflect the conditions reported by local weather stations.</li>
+        <li>The air quality is represented through an easy-to-understand color code:
+            <!-- Unordered list within ordered list -->
+            <ul>
+                <li><span style="color: green;">Green:</span> Good air quality</li>
+                <li><span style="color: yellow;">Yellow:</span> Moderate air quality</li>
+                <li><span style="color: red;">Red:</span> Poor air quality</li>
+            </ul>
+        </li>
+        <li>Beneath the interactive map and location-specific air quality information, you'll find a handy reference database. This tool lists possible coordinates for a selection of well-known places, including our team's headquarters in College Park. It's a great starting point for satisfying your curiosity or when you don't have a specific place in mind.</li>
+    </ol>
+    <p>Use these features to stay informed and proactive about the air quality in your environment. Happy exploring!</p>
+
+    <!-- Developer's manual section -->
+    <h2>Developer's Manual</h2>
+
+    <!-- Getting started section -->
+    <section id="getting-started">
+        <h2>Getting Started</h2>
+        <p>
+            In order to properly work with the webpage, please start by downloading the necessary files from the GitHub repository. The needed files include Final_Project_V2.html, Final_Project_V2.js, About.html, Documentation.html, Style.css, App.js, and finally the README.md. To actually run the site on your end device, start by getting the localhost up and running by typing the following two commands into your terminal: "npm init" and "npm install express", and then add the Supabase module and the CORS module with the following command lines: "npm install @supabase/supabase-js" and "npm install cors". Next, start the App.js with the command "node App.js". Once you receive a message that the server is running on port 3000, you can click the initial HTML file "Final_Project_V2.html" and then the "Go Live" button at the bottom right of Visual Studio Code, and as a result, get the site up and running. From this point, you will be brought to the homepage of the site where the actual APIs and main features of the project are located. You will also see the navigation bar where you can view the complimentary About page and Documentation page which houses all the needed information for users and developers to use the site.
+        </p>
+    </section>
+
+    <!-- APIs section -->
+    <section id="apis">
+        <h2>APIs</h2>
+        <p>
+            For the site's main features located on the homepage, the following explains where in the code the API requests are located and what they are responsible for along with what each function is doing. Starting from the top of the homepage there is a form that asks for Latitude and Longitude coordinates. When users enter this information and submit it, the map located underneath, which initially loads with US coordinates and AQI widgets, will adjust to the location provided and show the many new widgets or Air Quality particulate matter that is 2.5 micrometers in diameter or smaller. Underneath the map, a box will list metadata about the air quality in the area such as Air Quality Index, Dominant Pollutant, Humidity, Temperature, Pressure, City, Attribution Sources, and Time.
+
+            The API used for controlling the map is Leaflet, a lightweight JavaScript library. Starting with the first line of JavaScript code located under the comment // Center the map on the United States, the initial coordinates and zoom level of the map are established by L or Leaflet's. Moving forward to the following comment line // Add OpenStreetMap tiles to the map, Leaflet is fetching the map tiles from openstreetmap.org and overlaying them onto the page, helping to generate the initial screen. Finally, the next comment line and code titled // Add Air Quality Index layer to the map is causing Leaflet to fetch the previously mentioned AQI widgets and properly overlay them onto the map from the world air quality index project API.
+
+            The next three comment lines are simply the functions used to listen for and react to the Latitude and Longitude form submission, check whether they are valid coordinates, adjust the map if they are, and pull the widgets from the World Air Quality Index Project API just like before. Finally, the next two sections of functions // Fetch AQI data from the API and // Display AQI data with bold titles are the actual JSON fetches from the AQI API which includes all the metadata info listed in the first paragraph. This JSON data is then formatted and placed in the appropriate container on the page for the user to read.
+        </p>
+    </section>
+
+    <!-- Database section -->
+    <section id="database">
+        <h2>Database</h2>
+        <p>
+            Moving further down the page, underneath the map, is the database whose actual title is AQI_LAT_LONG. This database was constructed in Supabase and is generated live on the page and will update to the most current copy of the table every time it is loaded. Its purpose is to provide users with possible latitude and longitude coordinates to use for the map above. The rest of the JavaScript file includes the code for fetching the data and displaying it on screen in a professionally formatted fashion. The first two comment sections labeled // Function to fetch and display Supabase table data and // Fetch data from our server's /data endpoint are the most important parts. The fetch command is the actual call to the database endpoint which is produced by the app.js file. It is looking for a JSON response which, as explained above, is then formatted to make the table seen on the screen when the page is loaded. This is the last of the endpoint calls in the document. 
+        </p>
+    </section>
+
+    <!-- App.js section -->
+    <section id="app-js">
+        <h2>App.js</h2>
+        <p>
+            This file is a Node.js server application that uses the Express.js framework to operate as an intermediary between the Supabase database that we have created and the frontend, helping to generate the endpoints for fetching all the data for the helpful latitude and longitude tables that are displayed on the home screen underneath the metadata container on the map as mentioned above. The most important section of code is the URL for the Supabase database and the complimentary API key, both are labeled under the comment section labeled // Initialize the Supabase client with hardcoded URL and Key. Finally, it's important to note that CORS was used to help ensure that the Node.js/Express server can handle requests from web pages hosted on different domains and keep the frontend and backend running properly.
+        </p>
+    </section>
+
+    <!-- Testing, bugs, and development section -->
+    <section id="testing-bugs-development">
+        <h2>Test, Bugs, and Future Development</h2>
+        <p>
+            At this current moment in time, the site has no known bugs or tests that have been developed for use. However, in terms of future development, the team and I mentioned including the ability to update the database live every time a user enters in coordinates to the map. We were also interested in adding a feature to give users the ability to simply add data to the tables and have it update the Supabase table through an add data form. However, due to time constraints, these features never made it to the current site.  
+        </p>
+    </section>
+
+    <!-- Correspondents section -->
+    <section id="correspondents">
+        <h2>Correspondents</h2>
+        <p>
+            If you have any further questions about the code or need further assistance, feel free to reach our head developer at the following email.
+            <br>
+            Noah Dolnick: noahdolnick@gmail.com
+
+            
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2023 Air Quality Monitoring App. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
