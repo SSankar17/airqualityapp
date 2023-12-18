@@ -14,6 +14,36 @@ Air quality is an often underestimated factor that plays a pivotal role in our o
 
 **Target Users:** This is intended for the general public, in particular, those with breathing issues such as asthma or dust allergies as it can be helpful for these individuals to be able to check the air qualiity of a location before traveling in order to take necessary precausions. 
 
-## [Link to User Manual](user_guide.html)
+# [Developer's Guide](https://docs.google.com/document/d/1ST9N4CwJZG6KqTgQTu3rLrEwGckQdTTy8HxdHZu626s/edit?usp=sharing)
 
-## [Link to Developer Guide]
+**Getting Started:**
+
+In order to properly work with the webpage, please start by downloading the necessary files from the GitHub repository. The needed files include Final_Project_V2.html, About.html, Index.html, Final_Project_V2.js, App.js, Style.css, and finally the README.md. To actually run the site on your end device start by getting the local host up and running by typing the following two commands into your command line “npm init” and “npm install express” and then starting App.js with the command line “App.js”. Once you receive a message that the Server is running on port 3000 you can click the initial html file “Final_Project_V2.html” 
+And then the “Go Live” button at the bottom right of Visual Code Studios and as a result get the site up and running. From this point you will be brought to the home page of the site where the actual APIs and main features of the project are located. You will also see the navigation bar where you can view the complimentary about page and non developers site documentation for teaching users how to work and use the page. 
+
+**APIs:**
+
+For the site's main features located on the homepage, the following explains where in the code the API requests are located and what they are responsible for along with what each function is doing. Starting from the top of the homepage there is a form that asks for Latitude and Longitude coordinates. When users enter this information and submit it, the map located underneath, which initially loads with US coordinates and AQI widgets, will adjust to the location provided and show the many new widgets or Air Quality particulate matter that is 2.5 micrometers in diameter or smaller. Underneath the map, a box will list metadata about the air quality in the area such as Air Quality Index, Dominant Pollutant, Humidity, Temperature, Pressure, City, Attribution Sources, and Time.
+
+The API used for controlling the map is Leaflet, a lightweight JavaScript library. Starting with the first line of JavaScript code located under the comment // Center the map on the United States, the initial coordinates and zoom level of the map are established by L or Leaflet's. Moving forward to the following comment line // Add OpenStreetMap tiles to the map, Leaflet is fetching the map tiles from openstreetmap.org and overlaying them onto the page, helping to generate the initial screen. Finally, the next comment line and code titled // Add Air Quality Index layer to the map is causing Leaflet to fetch the previously mentioned AQI widgets and properly overlay them onto the map from the world air quality index project API. 
+
+The next three comment lines are simply the functions used to listen for and react to the Latitude and Longitude form submission, check whether they are valid coordinates, adjust the map if they are, and pull the widgets from the World Air Quality Index Project API just like before. Finally, the next two sections of functions // Fetch AQI data from the API and // Display AQI data with bold titles are the actual JSON fetches from the AQI API which includes all the metadata info listed in the first paragraph. This JSON data is then formatted and placed in the appropriate container on the page for the user to read.
+
+
+**Database:**
+
+Moving further down the page, underneath the map, is the database whose actual title is AQI_LAT_LONG. This database was constructed in Supabase and is generated live on the page and will update to the most current copy of the table every time it is loaded. Its purpose is to provide users with possible latitude and longitude coordinates to use for the map above. The rest of the JavaScript file includes the code for fetching the data and displaying it on screen in a professionally formatted fashion. The first two comment sections labeled // Function to fetch and display Supabase table data and // Fetch data from our server's /data endpoint are the most important parts. The fetch command is the actual call to the database endpoint which is produced by the app.js file. It is looking for a JSON response which, as explained above, is then formatted to make the table seen on the screen when the page is loaded. This is the last of the endpoint calls in the document.
+
+**App.js:**
+
+This file is a Node.js server application that uses the Express.js framework to operate as an intermediary between the Supabase database that we have created and the frontend, helping to generate the endpoints for fetching all the data for the helpful latitude and longitude tables that are displayed on the home screen underneath the metadata container on the map as mentioned above. The most important section of code is the URL for the Supabase database and the complimentary API key, both are labeled under the comment section labeled // Initialize the Supabase client with hardcoded URL and Key. Finally, it's important to note that CORS was used to help ensure that the Node.js/Express server can handle requests from web pages hosted on different domains and keep the frontend and backend running properly.
+
+**Test, Bugs, and Future Development:**
+At this current moment in time, the site has no known bugs or tests that have been developed for use. However, in terms of future development, the team and I mentioned including the ability to update the database live every time a user enters in coordinates to the map. We were also interested in adding a feature to give users the ability to simply add data to the tables and have it update the Supabase table through an add data form. However, due to time constraints, these features never made it to the current site.
+
+**Correspondents:**
+If you have any further questions about the code or need further assistance, feel free to reach our head developer at the following email.
+
+**Noah Dolnick: noahdolnick@gmail.com**
+
+# [Link to User Manual](user_guide.html)
