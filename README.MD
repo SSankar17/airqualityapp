@@ -1,5 +1,5 @@
-INST377FinalProject
-Sanjana, Noah, Kisa
+# INST377FinalProject
+Group members: Sanjana, Noah, Kisa
 
 About this Project
 Purpose: to provide a platform for individuals to monitor and track changes in air quality and therefore provide at least some level of insight into the hands of people that wish to monitor such issues
