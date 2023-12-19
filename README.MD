@@ -17,7 +17,7 @@ Languages: HTML, JS, CSS
 
 Target Users: This is intended for the general public, in particular, those with breathing issues such as asthma or dust allergies as it can be helpful for these individuals to be able to check the air qualiity of a location before traveling in order to take necessary precausions.
 
-Developer's Guide
+[Developer's Guide Getting Started](./Documentation.html)
 Getting Started:
 
 In order to properly work with the webpage, please start by downloading the necessary files from the GitHub repository. The needed files include Final_Project_V2.html, Final_Project_V2.js, About.html, Documentation.html, Style.css, App.js, and finally the README.md. To actually run the site on your end device, start by getting the localhost up and running by typing the following two commands into your terminal: “npm init” and “npm install express”, and then add the Supabase module and the CORS module with the following command lines: “npm install @supabase/supabase-js” and “npm install cors”. Next, start the App.js with the command “node App.js”. Once you receive a message that the server is running on port 3000, you can click the initial HTML file “Final_Project_V2.html” and then the “Go Live” button at the bottom right of Visual Studio Code, and as a result, get the site up and running. From this point, you will be brought to the homepage of the site where the actual APIs and main features of the project are located. You will also see the navigation bar where you can view the complimentary About page and Documentation page which houses all the needed information for users and developers to use the site. 
@@ -45,4 +45,4 @@ Correspondents: If you have any further questions about the code or need further
 
 Noah Dolnick: noahdolnick@gmail.com
 
-Link to User Manual
+[Link to User Manual](./Documentation.html)
