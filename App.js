@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Initialize the Supabase client with hardcoded URL and Key
 const supabase = createClient(
-  'https://tuoqrdshvtjfdpeocevy.supabase.co', // Your Supabase URL
+  'https://tuoqrdshvtjfdpeocevy.supabase.co', // our Supabase URL
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR1b3FyZHNodnRqZmRwZW9jZXZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIyNjE1NzIsImV4cCI6MjAxNzgzNzU3Mn0.PSlrPE9OzJ7kkiYt91n6sPvMSn-hPDAMwe_IqbHoVxU' // Your Supabase Key
 );
 
