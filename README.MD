@@ -41,8 +41,10 @@ This file is a Node.js server application that uses the Express.js framework to 
 
 Test, Bugs, and Future Development: At this current moment in time, the site has no known bugs or tests that have been developed for use. However, in terms of future development, the team and I mentioned including the ability to update the database live every time a user enters in coordinates to the map. We were also interested in adding a feature to give users the ability to simply add data to the tables and have it update the Supabase table through an add data form. However, due to time constraints, these features never made it to the current site.
 
-**Correspondents:** If you have any further questions about the code or need further assistance, feel free to reach our head developer at the following email.
+**Correspondents:** If you have any further questions about the code or need further assistance, feel free to reach our developers at the following email.
 
 Noah Dolnick: noahdolnick@gmail.com
+Sanjana Sankar: sanjana.sankar16@gmail.com
+
 
 [Link to User Manual](./Documentation.html)
