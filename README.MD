@@ -1,4 +1,4 @@
-# INST377FinalProject
+# Air Quality App - INST377 Final Project
 Group members: Sanjana, Noah, Kisa
 
 ## About this Project
